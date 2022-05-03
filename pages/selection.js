@@ -8,9 +8,9 @@ export default function Selection(){
                     minindex = j;
                 }
             }
-            // if(minindex !== i ){ // minindex가 i랑 같은 조건이 안오지 않나?
+            if(minindex !== i ){ 
                 [array[i], array[minindex]] = [array[minindex], array[i]]
-            // }
+            }
         }
         
     return (
