@@ -1,4 +1,9 @@
 export default function Merge () {
+    let arraynum = [];
+    for(let i =0; i<100; i++){
+        let arraytemp= [Math.floor(Math.random() * 100)];
+        arraynum = [...arraynum, ...arraytemp];
+    }
     function merge2(left, right) {
         const sortedArr = [];
         while (left.length && right.length) {
@@ -19,12 +24,18 @@ export default function Merge () {
         return merge2(mergeSort(left), mergeSort(right));
       }
       
-      const arr = [7, 4, 3, 2, 1, 6, 5];
-      const sortedArray = mergeSort(arr);
+      const sortedArray = mergeSort(arraynum);
+      
+      const printarray = (array) => {
+          for(let i=0;i<100;i++){
+              ("index[" + i + "] = " + array[i]);
+          }
+      }
+      printarray(sortedArray);
     return(
         <div>
             <p>병합 정렬</p>
-            <p>{sortedArray}</p>
+            <p>dd</p>
         </div>
 
     )

@@ -1,5 +1,5 @@
 export default function Bubble(){
-    let array = [8, 9 , 10, 1, 3, 4, 5, 7, 6, 2];
+    let array = [1,5,7,8,4,3,6,9,2];
     console.log(array);
         for (let i = 0; i < array.length; i++) {
             let swap;

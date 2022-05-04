@@ -1,8 +1,14 @@
-import '../styles/globals.css'
+import '../styles/globals.css';
 import Link from "next/link";
 
 function MyApp({ Component, pageProps }) {
-            
+  let arraynum = [];
+  for(let i =0; i<100; i++){
+      let arraytemp= [Math.floor(Math.random() * 100)];
+      arraynum = [...arraynum, ...arraytemp];
+  }
+  console.log(arraynum)
+  
   return (
     <div>
       <h1>Sorting</h1>
@@ -23,6 +29,9 @@ function MyApp({ Component, pageProps }) {
       </Link>
       <Link href="/merge">
         <a>병합 정렬</a>
+      </Link>
+      <Link href="/quick">
+        <a>퀵 정렬</a>
       </Link>
       <hr />
       <Component {...pageProps} />
